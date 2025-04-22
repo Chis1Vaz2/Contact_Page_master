@@ -115,8 +115,8 @@
 }
 ::placeholder {
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 700; /* O usa 700 si los quieres en negrita */
-    color: #111827;    /* O  si lo quieres del mismo tono que el texto */
+    font-weight: 700;
+    color: #111827;    
   }
   
   
@@ -195,4 +195,3 @@
       right: 12px;
     }
   }
-  
