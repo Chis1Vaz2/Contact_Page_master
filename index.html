@@ -1,84 +1,86 @@
+<!-- ============================  index.html  ============================ -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" />
+    <!-- Favicon -->
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon" />
 
-  <!-- Tipografía Be Vietnam Pro -->
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <!-- Be Vietnam Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Hoja de estilos externa -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <title>Contact Sales | Becv</title>
-</head>
-<body>
-  <!-- Cabecera con logo -->
-  <header class="header">
-    <img src="resources/Logo@2x.png" alt="Becv logo" class="logo">
-  </header>
+    <title>Contact Sales | Becv</title>
+  </head>
+  <body>
+    <!-- Cabecera ---------------------------------------------------- -->
+    <header class="header">
+      <!-- Solo el diamante del logo → 48 px × 48 px -->
+      <img src="resources/Logo@2x.png" alt="Becv" class="logo" />
+    </header>
 
-  <!-- Sección principal -->
-  <main class="hero">
-    <h1 class="hero__title">Interested in our<br>business pricing?</h1>
-    <p class="hero__subtitle">
-      Fill out the form to view details and we’ll<br>
-      contact you as soon as possible.
-    </p>
+    <!-- Contenido principal ---------------------------------------- -->
+    <main class="hero">
+      <h1 class="hero__title">
+        Interested in our<br />business pricing?
+      </h1>
+      <p class="hero__subtitle">
+        Fill out the form to view details and we’ll<br />contact you as soon as
+        possible.
+      </p>
 
-    <!-- Formulario de contacto -->
-    <form class="form" action="#" method="post">
-      <!-- Fila 1 -->
-      <div class="form__group">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Ethan Johnson" required>
-      </div>
-
-      <div class="form__group">
-        <label for="email">Company Email</label>
-        <input id="email" name="email" type="email" placeholder="ethan@johnson.com" required>
-      </div>
-
-      <!-- Fila 2 -->
-      <div class="form__group">
-        <label for="size">Company Size</label>
-        <div class="select-wrapper">
-          <select id="size" name="size">
-            <option selected>50–100 employees</option>
-            <option>1–10 employees</option>
-            <option>11–49 employees</option>
-            <option>101–500 employees</option>
-            <option>500+ employees</option>
-          </select>
-          <img src="resources/Expand_down.svg" alt="" class="select-arrow">
+      <!-- Formulario ------------------------------------------------ -->
+      <form class="form" action="#" method="post" autocomplete="off">
+        <!-- Fila 1 -->
+        <div class="form__group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Ethan Johnson" required />
         </div>
-      </div>
-
-      <div class="form__group">
-        <label for="subject">Subject</label>
-        <div class="select-wrapper">
-          <select id="subject" name="subject">
-            <option selected>Building Landing pages</option>
-            <option>Product Demo</option>
-            <option>Custom Development</option>
-            <option>Other</option>
-          </select>
-          <img src="resources/Expand_down.svg" alt="" class="select-arrow">
+        <div class="form__group">
+          <label for="email">Company Email</label>
+          <input id="email" name="email" type="email" placeholder="ethan@johnson.com" required />
         </div>
-      </div>
 
-      <!-- Fila 3 -->
-      <div class="form__group form__group--full">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="50–100 employees"></textarea>
-      </div>
+        <!-- Fila 2 -->
+        <div class="form__group">
+          <label for="size">Company Size</label>
+          <div class="select-wrapper">
+            <select id="size" name="size">
+              <option selected>50–100 employees</option>
+              <option>1–10 employees</option>
+              <option>11–49 employees</option>
+              <option>101–500 employees</option>
+              <option>500+ employees</option>
+            </select>
+            <img src="resources/Expand_down.svg" alt="" class="select-arrow" />
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="subject">Subject</label>
+          <div class="select-wrapper">
+            <select id="subject" name="subject">
+              <option selected>Building Landing pages</option>
+              <option>Product Demo</option>
+              <option>Custom Development</option>
+              <option>Other</option>
+            </select>
+            <img src="resources/Expand_down.svg" alt="" class="select-arrow" />
+          </div>
+        </div>
 
-      <!-- Botón -->
-      <button class="btn" type="submit">Contact Sales</button>
-    </form>
-  </main>
-</body>
+        <!-- Fila 3 -->
+        <div class="form__group form__group--full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="50–100 employees"></textarea>
+        </div>
+
+        <!-- Botón -->
+        <button class="btn" type="submit">Contact Sales</button>
+      </form>
+    </main>
+  </body>
 </html>
