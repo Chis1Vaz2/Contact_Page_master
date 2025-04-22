@@ -3,111 +3,179 @@
     --clr-field-bg: 228 68% 98%;
     --clr-text-primary: 0 0% 100%;
     --clr-text-secondary: 0 0% 90%;
+  
     /* Dimensiones */
-    --radius: 12px; /* radio exacto del mock‑up */
+    --radius: 12px; /* Radio exacto del mock‑up */
   }
   
   /* ------------ Reset básico ---------------- */
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%}
-  body{
-    font-family:"Be Vietnam Pro",system-ui,sans-serif;
-    color:hsl(var(--clr-text-primary));
-    /* Gradiente idéntico al diseño (evita escalado de imagen) */
-    background:linear-gradient(135deg,#B73A7B 0%,#8E39B5 38%,#4B38F5 100%) fixed;
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
-  /* ---------------- Cabecera ----------------- */
-  .header{padding:40px;max-width:1350px;margin-inline:auto}
-  .logo{width:100px;height:auto;display:block}
+  html, body {
+    height: 100%;
+  }
   
-  /* -------------- Sección hero -------------- */
-  .hero{
-    max-width:1020px; /* 760 px + márgenes laterales */
-    margin:96px auto 80px;
-    text-align:center;
-    padding-inline:24px;
+  body {
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
+    color: hsl(var(--clr-text-primary));
+  
+    /* Gradiente idéntico al diseño */
+    background: linear-gradient(135deg, #B73A7B 0%, #8E39B5 38%, #4B38F5 100%) fixed;
   }
-  .hero__title{
-    font-size:clamp(2.75rem,5vw,4rem); /* 44‑64 px */
-    font-weight:700;
-    line-height:1.15;
-    margin-bottom:24px;
+  
+  /* ---------------- Cabecera ---------------- */
+  .header {
+    padding: 40px;
+    max-width: 1280px;
+    margin-inline: auto;
   }
-  .hero__subtitle{
-    font-size:clamp(1.125rem,1.6vw,1.5rem); /* 18‑24 px */
-    font-weight:400;
-    color:hsla(var(--clr-text-secondary)/.85);
-    margin-bottom:64px;
+  
+  .logo {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+  
+  /* -------------- Sección Hero -------------- */
+  .hero {
+    max-width: 1020px;
+    margin: 96px auto 80px;
+    text-align: center;
+    padding-inline: 24px;
+  }
+  
+  .hero__title {
+    font-size: clamp(2.75rem, 5vw, 4rem); /* 44‑64 px */
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  
+  .hero__subtitle {
+    font-size: clamp(1.125rem, 1.6vw, 1.5rem); /* 18‑24 px */
+    font-weight: 400;
+    color: hsla(var(--clr-text-secondary) / .85);
+    margin-bottom: 64px;
   }
   
   /* -------------- Formulario ---------------- */
-  .form{
-    max-width:760px;
-    margin-inline:auto;
-    display:grid;
-    gap:20px;
-    padding:32px;
-    background:hsla(0,0%,100%,.08);
-    backdrop-filter:blur(25px);
-    border-radius:var(--radius);
-    box-shadow:0 30px 100px rgba(17,23,41,.18);
+  .form {
+    max-width: 760px;
+    margin-inline: auto;
+    display: grid;
+    gap: 20px;
+    padding: 32px;
+    background: hsla(0, 0%, 100%, 0.08);
+    backdrop-filter: blur(25px);
+    border-radius: var(--radius);
+    box-shadow: 0 30px 100px rgba(17, 23, 41, 0.18);
   }
-  /* grid → 2 cols desde 900 px */
-  @media(min-width:900px){.form{grid-template-columns:repeat(2,1fr)}}
   
-  .form label{
-    font-size:.75rem;
-    font-weight:600;
-    margin-bottom:6px;
-    display:block;
-    text-align:left;
+  /* Grid de 2 columnas desde 1024px */
+  @media (min-width: 1024px) {
+    .form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .form label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    text-align: left;
   }
   
   .form input,
   .form textarea,
-  .form select{
-    width:100%;
-    font:inherit;
-    padding:18px 24px;
-    border:none;
-    border-radius:8px;
-    background:hsl(var(--clr-field-bg));
-    color:#111827;
-    resize:none;
-    outline:none;
+  .form select {
+    width: 100%;
+    font: inherit;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 8px;
+    background: hsl(var(--clr-field-bg));
+    color: #111827;
+    resize: none;
+    outline: none;
   }
-  .form textarea{min-height:170px}
   
-  /* Select custom */
-  .select-wrapper{position:relative}
-  .select-wrapper select{appearance:none;cursor:pointer}
-  .select-arrow{
-    position:absolute;right:16px;top:50%;transform:translateY(-50%);
-    width:18px;pointer-events:none;
+  .form textarea {
+    min-height: 170px;
+  }
+  
+  /* Select personalizado */
+  .select-wrapper {
+    position: relative;
+  }
+  
+  .select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+  
+  .select-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    pointer-events: none;
   }
   
   /* Columnas completas */
-  .form__group--full{grid-column:1/-1}
+  .form__group--full {
+    grid-column: 1 / -1;
+  }
   
   /* Botón */
-  .btn{
-    grid-column:1/-1;
-    padding:20px;
-    border:none;border-radius:8px;
-    background:hsl(var(--clr-text-primary)/.95);
-    color:#3C3C3C;
-    font-weight:700;font-size:1.1rem;
-    cursor:pointer;transition:background .2s ease;
-  }
-  .btn:hover,.btn:focus-visible{background:hsl(var(--clr-text-primary))}
-  
-  /* ---------- Ajustes móviles <440 px --------- */
-  @media(max-width:439px){
-    .hero{margin-top:64px;margin-bottom:56px}
-    .btn{font-size:1rem}
-    .form{padding:24px}
+  .btn {
+    grid-column: 1 / -1;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background: hsl(var(--clr-text-primary) / 0.95);
+    color: #3C3C3C;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
   }
   
-  /* ------------------------------------------- */
+  .btn:hover,
+  .btn:focus-visible {
+    background: hsl(var(--clr-text-primary));
+  }
+  
+  /* ----------- Mobile: 640px y menos ---------- */
+  @media (max-width: 640px) {
+    .hero {
+      margin-top: 64px;
+      margin-bottom: 56px;
+    }
+  
+    .form {
+      padding: 24px;
+    }
+  
+    .form input,
+    .form textarea,
+    .form select {
+      padding: 16px 20px;
+    }
+  
+    .btn {
+      font-size: 1rem;
+    }
+  
+    .select-arrow {
+      right: 12px;
+    }
+  }
   
